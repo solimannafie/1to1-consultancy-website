@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { 
   Briefcase, 
@@ -21,9 +20,9 @@ const ServiceModal = ({ isOpen, onClose, title, content }: ServiceModalProps) =>
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto bg-black bg-opacity-50" onClick={onClose}>
-      <div className="bg-white rounded-lg shadow-xl p-6 w-11/12 max-w-2xl" onClick={(e) => e.stopPropagation()}>
+      <div className="bg-white rounded-lg shadow-xl p-6 w-11/12 max-w-lg max-h-[80vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
         <div className="flex justify-between items-center mb-4">
-          <h3 className="text-2xl font-bold text-blue-900">{title}</h3>
+          <h3 className="text-xl font-bold text-blue-900">{title}</h3>
           <Button
             variant="ghost"
             onClick={onClose}
@@ -135,21 +134,13 @@ const ServicesSection = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="service-card text-center py-8 px-4"
+              className="bg-blue-800 text-center py-6 px-4 rounded-lg cursor-pointer hover:bg-blue-700 transition-colors shadow-md"
               onClick={() => setActiveModal(service.id)}
             >
-              <div className="service-icon mx-auto">
+              <div className="service-icon mx-auto mb-3">
                 {service.icon}
               </div>
-              <h3 className="text-lg font-bold mb-2">{service.title}</h3>
-              <p className="text-gray-600 text-sm mb-4">{service.shortDescription}</p>
-              <Button 
-                variant="outline" 
-                size="sm"
-                className="border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white transition-colors"
-              >
-                Details
-              </Button>
+              <h3 className="text-lg font-bold text-white">{service.title}</h3>
             </div>
           ))}
         </div>

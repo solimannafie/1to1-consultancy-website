@@ -17,6 +17,23 @@ const AboutSection = () => {
             <p className="text-lg leading-relaxed mb-6 text-gray-700">
               Our mission is to assist businesses in achieving their strategic objectives and maintaining sustainable growth. By acting as a real partner, we share in the challenges and the successes of our clients.
             </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+              <div className="rounded-lg overflow-hidden shadow-md">
+                <img 
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" 
+                  alt="Team collaboration" 
+                  className="w-full h-60 object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-md">
+                <img 
+                  src="https://images.unsplash.com/photo-1483058712412-4245e9b90334" 
+                  alt="Professional workspace" 
+                  className="w-full h-60 object-cover"
+                />
+              </div>
+            </div>
           </div>
           
           <div>
@@ -26,6 +43,14 @@ const AboutSection = () => {
                 We believe that a vision cannot be realized without the ability to execute. At 1TO1, our leadership team is honest, passionate, and dedicated to uncovering and addressing the real needs for change in our clients' businesses. Together, we aim to overcome future challenges and celebrate mutual success.
               </p>
             </Card>
+            
+            <div className="mt-6 rounded-lg overflow-hidden shadow-md">
+              <img 
+                src="https://images.unsplash.com/photo-1460574283810-2aab119d8511" 
+                alt="Corporate building" 
+                className="w-full h-52 object-cover"
+              />
+            </div>
           </div>
         </div>
         
