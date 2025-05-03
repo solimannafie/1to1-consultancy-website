@@ -26,15 +26,15 @@ const AboutSection = () => {
           </div>
           
           <div>
-            <Card className="h-full p-6 border-none shadow-lg bg-gradient-to-br from-blue-900 to-blue-700 text-white py-0 px-0">
-              <h3 className="text-xl font-bold mb-4">Our Vision</h3>
-              <p className="mb-6">
+            <Card className="h-full p-6 border-none shadow-lg bg-gradient-to-br from-blue-900 to-blue-700 text-white px-[15px] my-0 mx-[44px] py-[3px]">
+              <h3 className="text-xl font-bold mb-4 text-left">Our Vision</h3>
+              <p className="mb-6 text-base my-0">
                 We believe that a vision cannot be realized without the ability to execute. At 1TO1, our leadership team is honest, passionate, and dedicated to uncovering and addressing the real needs for change in our clients' businesses. Together, we aim to overcome future challenges and celebrate mutual success.
               </p>
             </Card>
             
             <div className="mt-6 rounded-lg overflow-hidden shadow-md">
-              <img src="https://images.unsplash.com/photo-1460574283810-2aab119d8511" alt="Corporate building" className="w-full h-52 object-cover" />
+              
             </div>
           </div>
         </div>
