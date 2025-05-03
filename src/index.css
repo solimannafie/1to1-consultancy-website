@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,8 +13,8 @@
 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
+    
+    --primary: 215 100% 25%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -35,19 +36,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -98,4 +92,64 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.service-card {
+  @apply relative overflow-hidden rounded-xl bg-white shadow-lg transition-all hover:shadow-xl cursor-pointer;
+}
+
+.service-card::before {
+  content: '';
+  @apply absolute inset-0 bg-primary bg-opacity-0 transition-all duration-300;
+}
+
+.service-card:hover::before {
+  @apply bg-opacity-5;
+}
+
+.service-icon {
+  @apply mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary bg-opacity-10 text-primary;
+}
+
+.project-card {
+  @apply relative overflow-hidden rounded-xl bg-white shadow-md transition-all hover:shadow-xl;
+}
+
+.project-card::before {
+  content: '';
+  @apply absolute inset-0 bg-primary bg-opacity-0 transition-all duration-300;
+}
+
+.project-card:hover::before {
+  @apply bg-opacity-5;
+}
+
+.client-scroll {
+  @apply flex animate-scroll;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.modal-backdrop {
+  @apply fixed inset-0 bg-black bg-opacity-50 z-40 flex items-center justify-center;
+}
+
+.modal-content {
+  @apply bg-white rounded-lg shadow-xl p-6 w-11/12 max-w-3xl max-h-[90vh] overflow-y-auto;
+}
+
+.section-heading {
+  @apply text-3xl md:text-4xl font-bold mb-8 text-center relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-primary;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-tr from-blue-900 via-blue-800 to-blue-700 text-white;
 }
