@@ -12,11 +12,11 @@ const Projects = () => {
     },
     {
       title: "Evaluation Study for Save the Children International",
-      description: "Conducted mid-term and an end-line evaluation study for "Promoting Inclusive Empowerment for Women, girls and boys in Upper Egypt" projects."
+      description: 'Conducted mid-term and an end-line evaluation study for "Promoting Inclusive Empowerment for Women, girls and boys in Upper Egypt" projects.'
     },
     {
       title: "Science Technical Park Strategic Plan",
-      description: "Local consultants for the Korean side in managing the "Science Technical Park" strategic plan development and implementation; an Egyptian-Korean project."
+      description: 'Local consultants for the Korean side in managing the "Science Technical Park" strategic plan development and implementation; an Egyptian-Korean project.'
     },
     {
       title: "Production Units' Guidelines for Save the Children",
@@ -24,11 +24,11 @@ const Projects = () => {
     },
     {
       title: "Family Park Educational Centers",
-      description: "Developed and managed operations of the Educational Centers at the "Family Park" project in cooperation with "Bibliotheca Alexandrina" which was a pilot of STEAM education."
+      description: 'Developed and managed operations of the Educational Centers at the "Family Park" project in cooperation with "Bibliotheca Alexandrina" which was a pilot of STEAM education.'
     },
     {
       title: "Technical Education Initiative Support",
-      description: "Technical consultation support for "Comprehensive Technical Education Initiative in Egypt, TCTI"."
+      description: 'Technical consultation support for "Comprehensive Technical Education Initiative in Egypt, TCTI".'
     },
     {
       title: "Business Training & Coaching Programs",
@@ -36,7 +36,7 @@ const Projects = () => {
     },
     {
       title: "Entrepreneur Mentoring Program",
-      description: "Created curricula, trained, and mentored 400+ entrepreneurs on "Business Development" through GIZ's "Program Migration for Development (PME)" in 2022 - 2023."
+      description: 'Created curricula, trained, and mentored 400+ entrepreneurs on "Business Development" through GIZ\'s "Program Migration for Development (PME)" in 2022 - 2023.'
     },
     {
       title: "Ministry of Education Relations",
@@ -44,11 +44,11 @@ const Projects = () => {
     },
     {
       title: "Teachers' Capabilities Enhancement Fund",
-      description: "Managed a $1.5 Million fund for enhancing teachers' capabilities and students' IT knowledge through Intel's CSR programs; Intel Teach, Intel Learn, Intel Science & Engineering Fair "ISEF"."
+      description: 'Managed a $1.5 Million fund for enhancing teachers\' capabilities and students\' IT knowledge through Intel\'s CSR programs; Intel Teach, Intel Learn, Intel Science & Engineering Fair "ISEF".'
     },
     {
       title: "Intel Education Programs",
-      description: "Trained 150K teachers and 200K students all over Egypt through "Intel Teach" and "Intel Learn" programs."
+      description: 'Trained 150K teachers and 200K students all over Egypt through "Intel Teach" and "Intel Learn" programs.'
     },
     {
       title: "IT Infrastructure Implementation",

@@ -33,11 +33,11 @@ const ProjectsSection = () => {
     },
     {
       title: "Evaluation Study for Save the Children International",
-      description: "Conducted mid-term and an end-line evaluation study for "Promoting Inclusive Empowerment for Women, girls and boys in Upper Egypt" projects."
+      description: 'Conducted mid-term and an end-line evaluation study for "Promoting Inclusive Empowerment for Women, girls and boys in Upper Egypt" projects.'
     },
     {
       title: "Science Technical Park Strategic Plan",
-      description: "Local consultants for the Korean side in managing the "Science Technical Park" strategic plan development and implementation; an Egyptian-Korean project."
+      description: 'Local consultants for the Korean side in managing the "Science Technical Park" strategic plan development and implementation; an Egyptian-Korean project.'
     },
     {
       title: "Production Units' Guidelines for Save the Children",
