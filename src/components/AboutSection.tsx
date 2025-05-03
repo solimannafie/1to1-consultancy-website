@@ -1,41 +1,52 @@
+
 import { Card } from "@/components/ui/card";
 import { Briefcase, GraduationCap, Lightbulb } from "lucide-react";
+
 const AboutSection = () => {
-  return <section id="about" className="py-20 bg-gray-50">
+  return (
+    <section id="about" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="section-heading">About Us</h2>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          <div className="lg:col-span-2">
-            <p className="text-lg leading-relaxed mb-6 text-gray-700">
-              1TO1 Consultancy and Management Services is an Egyptian company specializing in management consultancy and training. With over 15 years of experience, we are committed to responding to our clients' needs and aspirations. Our strength lies in our deep understanding of local contexts and the extensive expertise of our consultants in delivering impactful solutions.
-            </p>
-            
-            <p className="text-lg leading-relaxed mb-6 text-gray-700">
-              Our mission is to assist businesses in achieving their strategic objectives and maintaining sustainable growth. By acting as a real partner, we share in the challenges and the successes of our clients.
-            </p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
-              <div className="rounded-lg overflow-hidden shadow-md">
-                
-              </div>
-              <div className="rounded-lg overflow-hidden shadow-md">
-                
-              </div>
-            </div>
-          </div>
+        <div className="max-w-6xl mx-auto">
+          <p className="text-lg leading-relaxed mb-12 text-gray-700 text-center">
+            1TO1 Consultancy and Management Services is an Egyptian company specializing in management consultancy and training. With over 15 years of experience, we are committed to responding to our clients' needs and aspirations. Our strength lies in our deep understanding of local contexts and the extensive expertise of our consultants in delivering impactful solutions.
+          </p>
           
-          <div>
-            <Card className="h-full p-6 border-none shadow-lg bg-gradient-to-br from-blue-900 to-blue-700 text-white px-[15px] my-0 mx-[44px] py-[3px]">
-              <h3 className="text-xl font-bold mb-4 text-left">Our Vision</h3>
-              <p className="mb-6 text-base my-0">
-                We believe that a vision cannot be realized without the ability to execute. At 1TO1, our leadership team is honest, passionate, and dedicated to uncovering and addressing the real needs for change in our clients' businesses. Together, we aim to overcome future challenges and celebrate mutual success.
+          {/* Mission and Photo */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <Card className="h-full p-6 border-none shadow-lg bg-gradient-to-br from-blue-900 to-blue-700 text-white">
+              <h3 className="text-xl font-bold mb-4">Our Mission</h3>
+              <p className="text-base">
+                Our mission is to assist businesses in achieving their strategic objectives and maintaining sustainable growth. By acting as a real partner, we share in the challenges and the successes of our clients, providing innovative solutions tailored to their unique needs.
               </p>
             </Card>
             
-            <div className="mt-6 rounded-lg overflow-hidden shadow-md">
-              
+            <div className="rounded-lg overflow-hidden shadow-md h-full">
+              <img 
+                src="/lovable-uploads/83a7e065-e8b7-44a7-9670-d7c3b9589bdf.png" 
+                alt="Business professionals in a meeting" 
+                className="w-full h-full object-cover"
+              />
             </div>
+          </div>
+          
+          {/* Photo and Vision */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="rounded-lg overflow-hidden shadow-md h-full order-2 lg:order-1">
+              <img 
+                src="/lovable-uploads/a1fe8994-142a-4c07-a31b-6725a454aff5.png" 
+                alt="Business team collaborating" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            <Card className="h-full p-6 border-none shadow-lg bg-gradient-to-br from-blue-900 to-blue-700 text-white order-1 lg:order-2">
+              <h3 className="text-xl font-bold mb-4">Our Vision</h3>
+              <p className="text-base">
+                We believe that a vision cannot be realized without the ability to execute. At 1TO1, our leadership team is honest, passionate, and dedicated to uncovering and addressing the real needs for change in our clients' businesses. Together, we aim to overcome future challenges and celebrate mutual success.
+              </p>
+            </Card>
           </div>
         </div>
         
@@ -102,6 +113,8 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default AboutSection;
