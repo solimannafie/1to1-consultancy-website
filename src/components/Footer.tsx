@@ -1,20 +1,12 @@
-
 import { Linkedin } from "lucide-react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-gray-900 text-white py-12">
+  return <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <img 
-              src="/lovable-uploads/1b20b3bc-fb36-4a43-ad57-b481838057da.png" 
-              alt="1TO1 Consultancy" 
-              className="h-16 w-auto mb-4"
-            />
-            <p className="text-gray-400 max-w-xs">
+            <img src="/lovable-uploads/1b20b3bc-fb36-4a43-ad57-b481838057da.png" alt="1TO1 Consultancy" className="h-16 w-auto mb-4" />
+            <p className="text-gray-400 max-w-xs text-left">
               Management Consultancy & Training with over 15 years of experience delivering impactful solutions.
             </p>
           </div>
@@ -37,12 +29,7 @@ const Footer = () => {
             <p className="text-gray-400 mb-4">+201223104684 / +201111243568</p>
             
             <div className="flex space-x-4">
-              <a 
-                href="https://www.linkedin.com/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="h-10 w-10 bg-gray-800 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors"
-              >
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="h-10 w-10 bg-gray-800 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors">
                 <Linkedin className="h-5 w-5 text-white" />
               </a>
             </div>
@@ -55,8 +42,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
