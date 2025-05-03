@@ -20,8 +20,8 @@ const ServiceModal = ({ isOpen, onClose, title, content }: ServiceModalProps) =>
   if (!isOpen) return null;
 
   return (
-    <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto bg-black bg-opacity-50" onClick={onClose}>
+      <div className="bg-white rounded-lg shadow-xl p-6 w-11/12 max-w-2xl" onClick={(e) => e.stopPropagation()}>
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-2xl font-bold text-blue-900">{title}</h3>
           <Button
@@ -47,8 +47,8 @@ const ServicesSection = () => {
     {
       id: "business-advisory",
       title: "Business Advisory",
-      icon: <Briefcase className="h-8 w-8" />,
-      shortDescription: "Expert guidance for navigating business challenges",
+      icon: <Briefcase className="h-6 w-6" />,
+      shortDescription: "Strategic guidance for businesses",
       content: (
         <div>
           <p className="mb-4">We specialize in providing expert guidance to help businesses navigate complex challenges and seize opportunities for growth. Our advisory services are tailored to address specific organizational needs, enabling our clients to remain resilient and competitive in dynamic markets.</p>
@@ -66,9 +66,9 @@ const ServicesSection = () => {
     },
     {
       id: "entrepreneurship",
-      title: "Entrepreneurship and Vocational Training",
-      icon: <Lightbulb className="h-8 w-8" />,
-      shortDescription: "Fostering innovation and practical skills development",
+      title: "Entrepreneurship & Vocational Training",
+      icon: <Lightbulb className="h-6 w-6" />,
+      shortDescription: "Fostering innovation & skills",
       content: (
         <div>
           <p className="mb-4">We are committed to fostering entrepreneurship and enhancing vocational skills, equipping individuals with the tools and knowledge needed to succeed in competitive markets. Our programs are designed to inspire innovation, nurture entrepreneurial mindsets, and provide hands-on experience in starting and managing successful ventures.</p>
@@ -87,8 +87,8 @@ const ServicesSection = () => {
     {
       id: "learning",
       title: "Learning & Development",
-      icon: <GraduationCap className="h-8 w-8" />,
-      shortDescription: "Empowering individuals and teams with practical skills",
+      icon: <GraduationCap className="h-6 w-6" />,
+      shortDescription: "Skills enhancement programs",
       content: (
         <div>
           <p className="mb-4">Our training programs are designed to empower individuals and teams with the skills and knowledge required to thrive in today's competitive environment. With a focus on practical, results oriented learning, we deliver tailored solutions that drive performance improvement.</p>
@@ -107,8 +107,8 @@ const ServicesSection = () => {
     {
       id: "project-management",
       title: "Project Management",
-      icon: <ChartBar className="h-8 w-8" />,
-      shortDescription: "Comprehensive project execution and oversight",
+      icon: <ChartBar className="h-6 w-6" />,
+      shortDescription: "Comprehensive project execution",
       content: (
         <div>
           <p className="mb-4">We provide comprehensive project management services to help businesses achieve their goals efficiently and effectively. Our approach combines strategic insight with hands-on implementation to ensure success across various industries and sectors.</p>
@@ -131,26 +131,25 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4">
         <h2 className="section-heading">Services</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {services.map((service) => (
             <div
               key={service.id}
-              className="service-card"
+              className="service-card text-center py-8 px-4"
               onClick={() => setActiveModal(service.id)}
             >
-              <div className="p-8">
-                <div className="service-icon">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.shortDescription}</p>
-                <Button 
-                  variant="outline" 
-                  className="mt-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white transition-colors"
-                >
-                  Learn More
-                </Button>
+              <div className="service-icon mx-auto">
+                {service.icon}
               </div>
+              <h3 className="text-lg font-bold mb-2">{service.title}</h3>
+              <p className="text-gray-600 text-sm mb-4">{service.shortDescription}</p>
+              <Button 
+                variant="outline" 
+                size="sm"
+                className="border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white transition-colors"
+              >
+                Details
+              </Button>
             </div>
           ))}
         </div>

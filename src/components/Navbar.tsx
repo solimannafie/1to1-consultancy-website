@@ -24,34 +24,36 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
-            <img 
-              src="/lovable-uploads/1b20b3bc-fb36-4a43-ad57-b481838057da.png" 
-              alt="1TO1 Consultancy" 
-              className="h-12 w-auto"
-            />
+            {isScrolled && (
+              <img 
+                src="/lovable-uploads/1b20b3bc-fb36-4a43-ad57-b481838057da.png" 
+                alt="1TO1 Consultancy" 
+                className="h-12 w-auto"
+              />
+            )}
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-gray-700 hover:text-primary transition-colors">
+            <a href="#about" className={`${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-primary transition-colors`}>
               About Us
             </a>
-            <a href="#services" className="text-gray-700 hover:text-primary transition-colors">
+            <a href="#services" className={`${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-primary transition-colors`}>
               Services
             </a>
-            <a href="#projects" className="text-gray-700 hover:text-primary transition-colors">
+            <a href="#projects" className={`${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-primary transition-colors`}>
               Projects
             </a>
-            <a href="#clients" className="text-gray-700 hover:text-primary transition-colors">
+            <a href="#clients" className={`${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-primary transition-colors`}>
               Clients
             </a>
-            <a href="#contact" className="text-gray-700 hover:text-primary transition-colors">
+            <a href="#contact" className={`${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-primary transition-colors`}>
               Contact
             </a>
           </div>
 
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-gray-700 focus:outline-none"
+            className={`md:hidden focus:outline-none ${isScrolled ? 'text-gray-700' : 'text-white'}`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -83,35 +85,35 @@ const Navbar = () => {
           <div className="md:hidden mt-4 pb-4">
             <a 
               href="#about" 
-              className="block py-2 text-gray-700 hover:text-primary"
+              className={`block py-2 ${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-primary`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About Us
             </a>
             <a 
               href="#services" 
-              className="block py-2 text-gray-700 hover:text-primary"
+              className={`block py-2 ${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-primary`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Services
             </a>
             <a 
               href="#projects" 
-              className="block py-2 text-gray-700 hover:text-primary"
+              className={`block py-2 ${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-primary`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Projects
             </a>
             <a 
               href="#clients" 
-              className="block py-2 text-gray-700 hover:text-primary"
+              className={`block py-2 ${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-primary`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Clients
             </a>
             <a 
               href="#contact" 
-              className="block py-2 text-gray-700 hover:text-primary"
+              className={`block py-2 ${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-primary`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact

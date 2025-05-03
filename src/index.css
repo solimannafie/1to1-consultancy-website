@@ -95,7 +95,7 @@
 }
 
 .service-card {
-  @apply relative overflow-hidden rounded-xl bg-white shadow-lg transition-all hover:shadow-xl cursor-pointer;
+  @apply relative overflow-hidden rounded-xl bg-white shadow-md transition-all hover:shadow-xl cursor-pointer;
 }
 
 .service-card::before {
@@ -108,7 +108,7 @@
 }
 
 .service-icon {
-  @apply mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary bg-opacity-10 text-primary;
+  @apply mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-900;
 }
 
 .project-card {
@@ -147,7 +147,7 @@
 }
 
 .section-heading {
-  @apply text-3xl md:text-4xl font-bold mb-8 text-center relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-primary;
+  @apply text-3xl md:text-4xl font-bold mb-12 text-center relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-primary;
 }
 
 .gradient-bg {

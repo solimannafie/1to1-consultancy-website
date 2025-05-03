@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-tr from-blue-900 via-blue-800 to-blue-700 overflow-hidden">
       <div className="absolute inset-0">
-        <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2850')] bg-cover bg-center opacity-10"></div>
+        <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1496307653780-42ee777d4833')] bg-cover bg-center opacity-20"></div>
       </div>
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl mx-auto text-center">
@@ -30,8 +30,7 @@ const Hero = () => {
             </Button>
             <Button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-blue-900"
+              className="bg-white text-blue-900 hover:bg-blue-50"
               size="lg"
             >
               Contact Us
