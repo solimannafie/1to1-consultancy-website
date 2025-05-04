@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import { Briefcase, GraduationCap, Lightbulb } from "lucide-react";
 const AboutSection = () => {
@@ -39,7 +38,7 @@ const AboutSection = () => {
                 </div>
                 <h4 className="text-xl font-semibold">Client Centric Approach</h4>
               </div>
-              <p className="text-gray-600 text-justify">
+              <p className="text-gray-600 text-left">
                 We design innovative, practical, and actionable solutions tailored to our clients' needs.
               </p>
             </Card>
@@ -57,7 +56,7 @@ const AboutSection = () => {
                 </div>
                 <h4 className="text-xl font-semibold">Team Strength</h4>
               </div>
-              <p className="text-gray-600 text-justify">
+              <p className="text-gray-600 text-left">
                 Leveraging individual abilities while working collaboratively with clients to maximize shared wisdom and experience.
               </p>
             </Card>
@@ -73,7 +72,7 @@ const AboutSection = () => {
                 </div>
                 <h4 className="text-xl font-semibold">Global Perspective</h4>
               </div>
-              <p className="text-gray-600 text-justify">
+              <p className="text-gray-600 text-left">
                 Respecting local value systems while integrating globally recognized best practices.
               </p>
             </Card>
@@ -85,9 +84,7 @@ const AboutSection = () => {
                 </div>
                 <h4 className="text-xl font-semibold">Professional Excellence</h4>
               </div>
-              <p className="text-gray-600 text-left">
-                Delivering high-quality services through profound knowledge and accumulated expertise.
-              </p>
+              <p className="text-gray-600 text-left">Delivering high-quality services through profound knowledge and accumulated expertise.</p>
             </Card>
           </div>
         </div>
