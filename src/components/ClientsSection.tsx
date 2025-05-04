@@ -27,8 +27,8 @@ const ClientsSection = () => {
     const handleScroll = () => {
       if (clientsRef.current) {
         // This would reset the scroll position to create an infinite scroll effect
-        if (clientsRef.current.scrollTop >= clientsRef.current.scrollHeight / 2) {
-          clientsRef.current.scrollTop = 0;
+        if (clientsRef.current.scrollLeft >= clientsRef.current.scrollWidth / 2) {
+          clientsRef.current.scrollLeft = 0;
         }
       }
     };
@@ -39,7 +39,7 @@ const ClientsSection = () => {
       // Start automatic scrolling
       let scrollInterval = setInterval(() => {
         if (container) {
-          container.scrollTop += 1;
+          container.scrollLeft += 1;
         }
       }, 50);
 
@@ -55,23 +55,26 @@ const ClientsSection = () => {
       <div className="container mx-auto px-4">
         <h2 className="section-heading">Our Clients</h2>
         
-        <div className="relative max-w-5xl mx-auto h-[400px] overflow-hidden">
-          {/* Gradient overlays for top and bottom */}
-          <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-white to-transparent z-10"></div>
-          <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent z-10"></div>
+        <div className="relative max-w-5xl mx-auto overflow-hidden">
+          {/* Gradient overlays for left and right */}
+          <div className="absolute top-0 left-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
+          <div className="absolute top-0 right-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
           
           <div 
             ref={clientsRef}
-            className="h-full overflow-y-auto no-scrollbar"
+            className="flex overflow-x-auto no-scrollbar py-8"
             style={{ scrollbarWidth: "none" }}
           >
-            <div className="grid grid-cols-3 gap-8 py-8">
+            <div className="flex gap-8">
               {duplicatedClients.map((client, index) => (
-                <div key={`${client.id}-${index}`} className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div 
+                  key={`${client.id}-${index}`} 
+                  className="flex-shrink-0 flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow h-28 w-48"
+                >
                   <img 
                     src={client.logo} 
                     alt={client.name} 
-                    className="max-h-24 max-w-full object-contain"
+                    className="max-h-20 max-w-full object-contain"
                   />
                 </div>
               ))}

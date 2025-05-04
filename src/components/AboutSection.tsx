@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 import { Briefcase, GraduationCap, Lightbulb } from "lucide-react";
 const AboutSection = () => {
@@ -10,7 +11,7 @@ const AboutSection = () => {
             1TO1 Consultancy and Management Services is an Egyptian company specializing in management consultancy and training. With over 15 years of experience, we are committed to responding to our clients' needs and aspirations. Our strength lies in our deep understanding of local contexts and the extensive expertise of our consultants in delivering impactful solutions.
           </p>
           
-          {/* Mission and Photo */}
+          {/* Mission and Vision side by side */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
             <Card className="h-full p-6 border-none shadow-lg bg-gradient-to-br from-blue-900 to-blue-700 text-white">
               <h3 className="text-xl font-bold mb-4">Our Mission</h3>
@@ -19,18 +20,7 @@ const AboutSection = () => {
               </p>
             </Card>
             
-            <div className="rounded-lg overflow-hidden shadow-md h-full">
-              <img src="/lovable-uploads/83a7e065-e8b7-44a7-9670-d7c3b9589bdf.png" alt="Business professionals in a meeting" className="w-full h-full object-cover" />
-            </div>
-          </div>
-          
-          {/* Photo and Vision */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="rounded-lg overflow-hidden shadow-md h-full order-2 lg:order-1">
-              <img src="/lovable-uploads/a1fe8994-142a-4c07-a31b-6725a454aff5.png" alt="Business team collaborating" className="w-full h-full object-cover" />
-            </div>
-            
-            <Card className="h-full p-6 border-none shadow-lg bg-gradient-to-br from-blue-900 to-blue-700 text-white order-1 lg:order-2">
+            <Card className="h-full p-6 border-none shadow-lg bg-gradient-to-br from-blue-900 to-blue-700 text-white">
               <h3 className="text-xl font-bold mb-4">Our Vision</h3>
               <p className="text-base text-justify">
                 We believe that a vision cannot be realized without the ability to execute. At 1TO1, our leadership team is honest, passionate, and dedicated to uncovering and addressing the real needs for change in our clients' businesses. Together, we aim to overcome future challenges and celebrate mutual success.
