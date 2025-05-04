@@ -1,10 +1,12 @@
+
 import { useState } from "react";
 import { 
   Briefcase, 
   ChartBar, 
   Lightbulb, 
   GraduationCap,
-  X
+  X,
+  ChevronRight
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -134,13 +136,18 @@ const ServicesSection = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-blue-800 text-center py-6 px-4 rounded-lg cursor-pointer hover:bg-blue-700 transition-colors shadow-md"
+              className="bg-blue-800 text-center py-6 px-4 rounded-lg cursor-pointer hover:bg-blue-700 transition-colors shadow-md relative group"
               onClick={() => setActiveModal(service.id)}
             >
               <div className="service-icon mx-auto mb-3">
                 {service.icon}
               </div>
-              <h3 className="text-lg font-bold text-white">{service.title}</h3>
+              <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
+              <p className="text-sm text-blue-100 mb-2">{service.shortDescription}</p>
+              <div className="flex items-center justify-center text-blue-200">
+                <span className="text-xs mr-1">Click for details</span>
+                <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </div>
             </div>
           ))}
         </div>
