@@ -1,8 +1,12 @@
 
-import { useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const ClientsSection = () => {
   const clientsRef = useRef<HTMLDivElement>(null);
+  const [autoScroll, setAutoScroll] = useState(true);
+  const [scrollInterval, setScrollIntervalId] = useState<number | null>(null);
   
   const clients = [
     { id: 1, logo: "/lovable-uploads/77836a99-6c99-4630-aa6e-1f38c3b43128.png", name: "Professional Accreditation" },
@@ -36,26 +40,73 @@ const ClientsSection = () => {
     const container = clientsRef.current;
     if (container) {
       container.addEventListener('scroll', handleScroll);
-      // Start automatic scrolling
-      let scrollInterval = setInterval(() => {
-        if (container) {
-          container.scrollLeft += 1;
-        }
-      }, 50);
+      
+      // Start automatic scrolling if autoScroll is true
+      if (autoScroll) {
+        const interval = window.setInterval(() => {
+          if (container) {
+            container.scrollLeft += 1;
+          }
+        }, 50);
+        setScrollIntervalId(interval);
+      }
 
       return () => {
         container.removeEventListener('scroll', handleScroll);
-        clearInterval(scrollInterval);
+        if (scrollInterval) {
+          clearInterval(scrollInterval);
+        }
       };
     }
-  }, []);
+  }, [autoScroll]);
+  
+  const scrollLeft = () => {
+    if (clientsRef.current) {
+      clientsRef.current.scrollLeft -= 300;
+      pauseAutoScroll();
+    }
+  };
+  
+  const scrollRight = () => {
+    if (clientsRef.current) {
+      clientsRef.current.scrollLeft += 300;
+      pauseAutoScroll();
+    }
+  };
+  
+  const pauseAutoScroll = () => {
+    setAutoScroll(false);
+    if (scrollInterval) {
+      clearInterval(scrollInterval);
+      setScrollIntervalId(null);
+    }
+  };
 
   return (
     <section id="clients" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="section-heading">Our Clients</h2>
         
-        <div className="relative max-w-5xl mx-auto overflow-hidden">
+        <div className="relative max-w-5xl mx-auto">
+          {/* Navigation arrows */}
+          <Button 
+            variant="outline" 
+            size="icon" 
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md hover:bg-gray-50"
+            onClick={scrollLeft}
+          >
+            <ArrowLeft className="h-4 w-4" />
+          </Button>
+          
+          <Button 
+            variant="outline" 
+            size="icon" 
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md hover:bg-gray-50"
+            onClick={scrollRight}
+          >
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+          
           {/* Gradient overlays for left and right */}
           <div className="absolute top-0 left-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
           <div className="absolute top-0 right-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10"></div>

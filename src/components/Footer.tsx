@@ -1,3 +1,4 @@
+
 import { Linkedin } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -27,12 +28,6 @@ const Footer = () => {
             <p className="text-gray-400 mb-2">18 Merghany St., Heliopolis, Cairo, Egypt</p>
             <p className="text-gray-400 mb-2">info@1to1consultancy.com</p>
             <p className="text-gray-400 mb-4">+201223104684 / +201111243568</p>
-            
-            <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="h-10 w-10 bg-gray-800 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors">
-                <Linkedin className="h-5 w-5 text-white" />
-              </a>
-            </div>
           </div>
         </div>
         

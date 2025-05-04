@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 const Hero = () => {
   return <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-tr from-blue-800 via-blue-700 to-blue-600 overflow-hidden">
@@ -8,7 +9,7 @@ const Hero = () => {
         <div className="max-w-3xl mx-auto text-center">
           <img src="/lovable-uploads/1b20b3bc-fb36-4a43-ad57-b481838057da.png" alt="1TO1 Consultancy" className="h-24 mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-            Consultancy <span className="text-zinc-50">&</span> Management Services
+            1TO1 Consultancy <span className="text-zinc-50">&</span> Management Services
           </h1>
           <p className="text-xl text-blue-100 mb-8">
             Delivering impactful solutions with over 15 years of experience

@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, Mail, MapPin, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -141,20 +141,6 @@ const ContactSection = () => {
                     <h4 className="text-lg font-semibold mb-1">Mobile</h4>
                     <p className="text-gray-600">+201223104684</p>
                     <p className="text-gray-600">+201111243568</p>
-                  </div>
-                </div>
-                
-                <div className="pt-6">
-                  <h4 className="text-lg font-semibold mb-3">Follow Us</h4>
-                  <div className="flex space-x-4">
-                    <a 
-                      href="https://www.linkedin.com/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="h-10 w-10 bg-blue-900 hover:bg-blue-800 rounded-full flex items-center justify-center transition-colors"
-                    >
-                      <Linkedin className="h-5 w-5 text-white" />
-                    </a>
                   </div>
                 </div>
               </div>
